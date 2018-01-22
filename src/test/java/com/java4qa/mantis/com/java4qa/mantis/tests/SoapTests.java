@@ -1,16 +1,11 @@
 package com.java4qa.mantis.com.java4qa.mantis.tests;
 
-import biz.futureware.mantis.rpc.soap.client.MantisConnectLocator;
-import biz.futureware.mantis.rpc.soap.client.MantisConnectPortType;
-import biz.futureware.mantis.rpc.soap.client.ProjectData;
 import com.java4qa.mantis.com.java4qa.mantis.model.Issue;
 import com.java4qa.mantis.com.java4qa.mantis.model.Project;
-import org.testng.Assert;
 import org.testng.annotations.Test;
 
 import javax.xml.rpc.ServiceException;
 import java.net.MalformedURLException;
-import java.net.URL;
 import java.rmi.RemoteException;
 import java.util.Set;
 
