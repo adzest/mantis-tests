@@ -18,7 +18,10 @@ public class ApplicationManager {
 
   private String browser;
   private RegistrationHelper registrationHelper;
-  private FtpHelper ftp;
+  private SftpHelper ssh;
+  private MailHelper mailHelper;
+  private JamesHelper jamesHelper;
+  private SoapHelper soapHelper;
 
   public ApplicationManager(String browser) {
     this.browser = browser;
@@ -45,19 +48,39 @@ public class ApplicationManager {
   }
 
   public RegistrationHelper registration() {
-    if (registrationHelper  == null) {
+    if (registrationHelper == null) {
       registrationHelper = new RegistrationHelper(this);
     }
     return registrationHelper;
   }
 
-  public FtpHelper ftp() {
-    if (ftp == null) {
-      ftp = new FtpHelper(this);
+  public SftpHelper ssh() {
+    if (ssh == null) {
+      ssh = new SftpHelper(this);
     }
-    return ftp;
+    return ssh;
   }
 
+  public MailHelper mail() {
+    if (mailHelper == null) {
+      mailHelper = new MailHelper(this);
+    }
+    return mailHelper;
+  }
+
+  public JamesHelper james() {
+    if (jamesHelper == null) {
+      jamesHelper = new JamesHelper(this);
+    }
+    return jamesHelper;
+  }
+
+  public SoapHelper soap() {
+    if (soapHelper == null) {
+      soapHelper = new SoapHelper(this);
+    }
+    return soapHelper;
+  }
 
   public WebDriver getDriver() {
     if (wd == null) {
